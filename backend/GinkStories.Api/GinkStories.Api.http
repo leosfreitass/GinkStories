@@ -1,0 +1,6 @@
+@GinkStories.Api_HostAddress = http://localhost:5030
+
+GET {{GinkStories.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
