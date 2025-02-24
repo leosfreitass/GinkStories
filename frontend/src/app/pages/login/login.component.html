@@ -1,24 +1,23 @@
-<header>
-  <!--imagem-->
-  <h1>GinkStories</h1>
-</header>
+<app-header></app-header>
+<section class="form">
+  <div>
+    <form action="">
+      <label for="email">Insira seu email</label>
+      <input type="email" name="email" id="email" placeholder="example@gmail.com">
+      <br>
+      <label for="password">Insira sua senha</label>
+      <input type="password" name="password" id="password" placeholder="*******">
+    </form>
+  </div>
 
-<section>
-  <form action="">
-    <label for="email">Insira seu email</label>
-    <input type="email" name="email" placeholder="example@gmail.com">
+  <div>
+    <button type="button">Entrar</button>
+  </div>
+  <div>
+    <a routerLink="/register" routerLinkActive="active">Ainda não tem uma conta? Cadastre-se</a>
     <br>
-    <label for="senha">Insira sua senha</label>
-    <input type="password" name="password" placeholder="*******">
-  </form>
+    <a href="#">Esqueceu sua senha?</a>
+  </div>
 </section>
 
-<section>
-  <button type="button">Entrar</button>
-</section>
 
-<footer>
-  <a routerLink="/register" rounterLinkActive="active">Ainda não tem uma conta? Cadastre-se</a>
-  <br>
-  <a href="#">Esqueceu sua senha?</a>
-</footer>

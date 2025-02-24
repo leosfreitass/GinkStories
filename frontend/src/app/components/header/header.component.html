@@ -1,0 +1,15 @@
+<header class="header">
+  <h1 class="header-title">
+    <a routerLink="/home" routerLinkActive="active">GinkStories</a>
+  </h1>
+  <nav class="header-nav">
+    <ul class="header-ul">
+      <li *ngIf="router.url !== '/login'">
+        <a routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+      <li *ngIf="router.url !== '/register'">
+        <a routerLink="/register" routerLinkActive="active">Sign up</a>
+      </li>
+    </ul>
+  </nav>
+</header>
