@@ -1,23 +1,35 @@
 <app-header></app-header>
-<section class="form">
-  <div>
-    <form action="">
-      <label for="email">Insira seu email</label>
-      <input type="email" name="email" id="email" placeholder="example@gmail.com">
-      <br>
-      <label for="password">Insira sua senha</label>
-      <input type="password" name="password" id="password" placeholder="*******">
-    </form>
-  </div>
+<main>
+  <section class="form">
+    <div class="form-labelinput">
+      <form action="">
+        <div class="form-field">
+          <label for="email">Insira seu email</label>
+          <input type="email" name="email" id="email" placeholder="example@gmail.com">
+        </div>
+        <div class="form-field">
+          <label for="password">Insira sua senha</label>
+          <input type="password" name="password" id="password" placeholder="*******">
+        </div>
 
-  <div>
-    <button type="button">Entrar</button>
-  </div>
-  <div>
-    <a routerLink="/register" routerLinkActive="active">Ainda não tem uma conta? Cadastre-se</a>
-    <br>
-    <a href="#">Esqueceu sua senha?</a>
-  </div>
-</section>
+      </form>
+    </div>
+
+    <div class="button">
+      <button type="button">Entrar</button>
+    </div>
+    <div class="options">
+      <div class="option-link">
+        <a routerLink="/register" routerLinkActive="active">Ainda não tem uma conta? Cadastre-se</a>
+      </div>
+      <div class="option-link">
+        <a href="#">Esqueceu sua senha?</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
 
 
