@@ -1,5 +1,6 @@
-using GinkStories.Api.Communication;
-using GinkStories.Api.Communication.Responses;
+using GinkStories.Api.UseCases.Users.Register;
+using GinkStories.Communication.Requests;
+using GinkStories.Communication.Responses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GinkStories.Api.Controllers
@@ -9,27 +10,48 @@ namespace GinkStories.Api.Controllers
     public class UsersController : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get( int id, RequestUserJson request)
         {
-            var result = new ResponseUser()
+            var response = new ResponseUserJson()
             {
-                Id = 1,
-                Email = "admin@gmail.com",
-                Name = "Admin",
+                Id = id,
+                Email = request.Email,
+                Name = request.Name,
             };
-            return Ok(result);
+            return Ok(response);
 
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] RequestUser request  )
+        [ProducesResponseType(typeof(ResponseUserJson), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ResponseErrorMessages), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> Post([FromBody] RequestUserJson request  )
         {
-            var response = new ResponseUser()
+            /*
+            var response = new ResponseUserJson()
             {
                 Name = request.Name,
                 Email = request.Email,
             };
-            return Ok(response);
+            */
+
+            try
+            {
+                var useCase = new RegisterUserUseCase();
+                var response = useCase.Execute(request);
+
+                return
+                    Created(string.Empty,
+                        response); //status created precisa passar dois parametros para não ter erro, defini um parametro vazio e outro passando a response
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new ResponseErrorMessages(ex.Message));
+            }
+            catch 
+            {
+               return StatusCode(StatusCodes.Status500InternalServerError, new ResponseErrorMessages("ERRO DESCONHECIDO"));
+            }
         }
 
         [HttpDelete]
@@ -42,9 +64,9 @@ namespace GinkStories.Api.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        public async Task<IActionResult> Put([FromRoute] int id, [FromBody] RequestUser request)
+        public async Task<IActionResult> Put([FromRoute] int id, [FromBody] RequestUserJson request)
         {
-            var response = new ResponseUser()
+            var response = new ResponseUserJson()
             {
                 Id = id,
                 Name = request.Name,
