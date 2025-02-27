@@ -1,6 +1,7 @@
 using GinkStories.Api.UseCases.Users.Register;
 using GinkStories.Communication.Requests;
 using GinkStories.Communication.Responses;
+using GinkStories.Exceptions.ExceptionsBase;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GinkStories.Api.Controllers
@@ -24,7 +25,7 @@ namespace GinkStories.Api.Controllers
 
         [HttpPost]
         [ProducesResponseType(typeof(ResponseUserJson), StatusCodes.Status201Created)]
-        [ProducesResponseType(typeof(ResponseErrorMessages), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Post([FromBody] RequestUserJson request  )
         {
             /*
@@ -44,13 +45,14 @@ namespace GinkStories.Api.Controllers
                     Created(string.Empty,
                         response); //status created precisa passar dois parametros para não ter erro, defini um parametro vazio e outro passando a response
             }
-            catch (ArgumentException ex)
+            catch ( GinkStoriesException ex)
             {
-                return BadRequest(new ResponseErrorMessages(ex.Message));
+                var errors = ex.GetErrors();
+                return BadRequest(new ResponseErrorMessagesJson(errors));
             }
             catch 
             {
-               return StatusCode(StatusCodes.Status500InternalServerError, new ResponseErrorMessages("ERRO DESCONHECIDO"));
+               return StatusCode(StatusCodes.Status500InternalServerError, new ResponseErrorMessagesJson("ERRO DESCONHECIDO"));
             }
         }
 
