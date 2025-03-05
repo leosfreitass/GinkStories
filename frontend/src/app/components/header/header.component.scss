@@ -13,9 +13,8 @@
   flex-direction: row;
 
   #header-icon {
-    width: 5vw;
-    height: 5vh;
-    //mudar cor
+    max-width: 2.5rem;
+    max-height: 2.5rem;
   }
 
   .header-title {
@@ -31,33 +30,29 @@
   }
 
   .explorar-button {
-    color: #333;
     justify-content: center;
     display: flex;
     flex-direction: row;
-    padding: 0.5em 3em;
+    padding: 0.5rem 2rem;
     border-radius: 0.25em;
     border: 1px solid #333;
     font-weight: bold;
     margin-left: 1rem;
-    width: 8vw;
     text-decoration: none;
+    color: #333;
+    align-items: center;
 
 
-
-    #explorar-button-icon {
-    justify-content: center;
-    margin-left: 0.5rem;
-    max-width: 2vw;
-    max-height: 2.5vh;
+    span {
+      margin-left: 0.5rem;
+      max-width: 1.5rem;
+      max-height: 1.5rem;
     }
   }
 
   .explorar-button:hover {
-    background-color: #f3f9cb;
-    color: #000000;
-
-
+    background-color: #333;
+    color: #fff;
   }
 }
 

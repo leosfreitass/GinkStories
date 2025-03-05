@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
 @font-face {
   font-family: Inter;
-  src: url('./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format("truetype"),
-  url('./assets/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf') format("truetype");
+  src: url('./assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format("truetype"),
+  url('./assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format("truetype");
 }
 
 * {
