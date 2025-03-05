@@ -13,8 +13,8 @@
   flex-direction: row;
 
   #header-icon {
-    max-width: 5vw;
-    max-height: 5vh;
+    width: 5vw;
+    height: 5vh;
     //mudar cor
   }
 
@@ -31,6 +31,7 @@
   }
 
   .explorar-button {
+    color: #333;
     justify-content: center;
     display: flex;
     flex-direction: row;
