@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Inter;
+  src: url('./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format("truetype"),
+  url('./assets/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf') format("truetype");
+}
+
 * {
+  font-family: Inter;
   box-sizing: border-box;
   margin: 0;
   padding: 0;

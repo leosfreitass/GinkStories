@@ -8,7 +8,7 @@ main{
     padding: 1em;
     width: 30%;
     flex-direction: column;
-    background-color: #FFD940;
+    //background-color: #FFD940;
     border-radius: 0.5em;
     align-items: center;
     margin-top: 6em;
@@ -30,7 +30,8 @@ main{
         input{
           border-radius: 0.5em;
           padding: 0.5em;
-          border: 2px ;
+          border: 2px solid;
+          border-color: #FFE62D;
 
 
         }
@@ -46,14 +47,15 @@ main{
         padding: 0.5em;
         border-radius: 0.5em;
         border: 0;
-        background-color: #3079DC;
-        color: #FFF;
+        background-color: #FFCC00;
+        color: #000;
         font-size: 1em;
+        font-weight: bold;
         opacity: 0.85;
         transition: 0.2s;
 
         &:hover{
-          background-color: #0062FF;
+          background-color: #FFE62D;
         }
       }
     }
