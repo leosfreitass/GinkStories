@@ -2,35 +2,52 @@
 <main>
   <section class="form">
     <div class="form-labelinput">
-      <form action="">
+      <form action="" (ngSubmit)="submit()" [formGroup]="formValidation" #f="ngForm">
         <div class="form-field">
           <label for="email">Email</label>
           <div class="input-with-icon">
             <span class="material-symbols-outlined">
               mail
               </span>
-            <input type="email" name="email" id="email" placeholder="example@gmail.com">
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" formControlName="email">
           </div>
 
+          <ng-container  *ngIf="email?.invalid ">
+            <div class="alert" *ngIf="email.hasError('email')">
+              Email invalido
+            </div>
+            <div class= "alert" *ngIf="email.hasError('required')">
+              Email é obrigatório
+            </div>
 
+          </ng-container>
         </div>
+
         <div class="form-field">
           <label for="password">Senha</label>
           <div class="input-with-icon">
             <span class="material-symbols-outlined">
               lock
               </span>
-            <input type="password" name="password" id="password" placeholder="*******">
+            <input type="password" name="password" id="password" placeholder="*******" formControlName="password">
           </div>
-
+          <ng-container *ngIf="password?.invalid && f.submitted">
+            <div class="alert" *ngIf="password.hasError('required')">
+              Senha é obrigatória
+            </div>
+            <div class="alert" *ngIf="password.hasError('minlength')">
+              Senha deve ter 7 caracteres
+            </div>
+          </ng-container>
         </div>
 
+        <div class="button">
+          <button type="submit"  >Entrar</button>
+        </div>
       </form>
+
     </div>
 
-    <div class="button">
-      <button type="button">Entrar</button>
-    </div>
     <div class="options">
       <div class="option-link">
         <a routerLink="/signup" routerLinkActive="active">Ainda não tem uma conta? Cadastre-se</a>
