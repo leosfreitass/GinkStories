@@ -20,9 +20,7 @@ export class LoginComponent implements OnInit {
       password: new FormControl ('',[Validators.required, Validators.minLength(7)])
     })
 
-    this.formValidation.get ('email')?.valueChanges.subscribe(value =>{
-      console.log(value)
-    })
+  
   }
 
   get email() {

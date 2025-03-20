@@ -2,53 +2,114 @@
 <main>
   <section class="form">
     <div class="form-labelinput">
-      <form action="">
+      <form action="" (ngSubmit)="submit()" [formGroup]="formValidation"  #f="ngForm">
+
         <div class="form-field">
-          <label for="name">Nome Completo</label>
+          <label for="name">Nome</label>
           <div class="input-with-icon">
             <span class="material-symbols-outlined">
               person
               </span>
-            <input type="text" name="name" id="name" placeholder="Ex: Maria Joaquina de Aragão">
+            <input type="text" name="name" id="name" placeholder="Ex: Maria" formControlName="firstName">
           </div>
 
+          <ng-container *ngIf="firstName.invalid && f.submitted">
+            <div class="alert"  *ngIf="firstName.hasError('required')">
+              Nome é obrigatório
+            </div>
+            <div class="alert" *ngIf="firstName.hasError('minlength')">
+              Nome pequeno
+            </div>
+          </ng-container>
         </div>
+
+        <div class="form-field">
+          <label for="lastname">Sobrenome</label>
+          <div class="input-with-icon">
+            <span class="material-symbols-outlined">
+              person
+            </span>
+            <input type="text" name="lastname" id="lastname" placeholder="Ex: Joaquina de Aragão" formControlName="lastName">
+          </div>
+
+          <ng-container *ngIf="lastName.invalid && f.submitted">
+            <div class="alert" *ngIf="lastName.hasError('required')">
+              Sobrenome é obrigatório
+            </div>
+            <div class="alert" *ngIf="lastName.hasError('minlength')">
+              Sobrenome Pequeno
+            </div>
+          </ng-container>
+        </div>
+
         <div class="form-field">
           <label for="email">Email</label>
           <div class="input-with-icon">
             <span class="material-symbols-outlined">
               mail
               </span>
-            <input type="email" name="email" id="email" placeholder="example@gmail.com">
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" formControlName="email">
           </div>
-
+          <ng-container *ngIf="email?.invalid && f.submitted">
+            <div class="alert" *ngIf="email.hasError('required')">
+              Email é obrigatório
+            </div>
+            <div class="alert" *ngIf="email?.hasError('email')">
+              Email invalido
+            </div>
+          </ng-container>
         </div>
+
         <div class="form-field">
           <label for="password">Senha</label>
           <div class="input-with-icon">
             <span class="material-symbols-outlined">
               lock
               </span>
-            <input type="password" name="password" id="password" placeholder="*******">
+            <input type="password" name="password" id="password" placeholder="*******" formControlName="password">
           </div>
-
+          <ng-container *ngIf="password?.invalid && f.submitted">
+            <div class="alert" *ngIf="password?.hasError('required')">
+              Senha é obrigatória
+            </div>
+            <div class="alert" *ngIf="password?.hasError('minlength')">
+              Senha deve ter 7 caracteres
+            </div>
+            <div class="alert" *ngIf="password?.hasError('hasUpperCase')">
+              Senha deve ter 1 letra maiúscula
+            </div>
+            <div class="alert" *ngIf="password?.hasError('hasLowerUpperCase')">
+              Senha deve ter 1 letra minúscula
+            </div>
+            <div class="alert" *ngIf="password?.hasError('hasNumericChar')">
+              Senha deve ter 1 número
+            </div>
+          </ng-container>
         </div>
+
         <div class="form-field">
           <label for="confirmationPassword">Confirme sua senha</label>
           <div class="input-with-icon">
             <span class="material-symbols-outlined">
               lock
               </span>
-            <input type="password" name="password" id="confirmationPassword" placeholder="*******">
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="*******" formControlName="confirmPassword">
           </div>
-
+          <ng-container *ngIf="confirmPassword?.invalid">
+            <div class="alert" *ngIf="confirmPassword.hasError('mismatch')">
+              Senhas diferentes
+            </div>
+          </ng-container>
         </div>
+
+        <div class="button">
+          <button type="submit">Criar conta</button>
+        </div>
+
       </form>
     </div>
 
-    <div class="button">
-      <button type="button">Criar conta</button>
-    </div>
+
     <div class="options">
       <div class="option-link">
         <a routerLink="/login" routerLinkActive="active">Já tem uma conta? Faça login</a>

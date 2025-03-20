@@ -12,7 +12,7 @@
             <input type="email" name="email" id="email" placeholder="example@gmail.com" formControlName="email">
           </div>
 
-          <ng-container  *ngIf="email?.invalid ">
+          <ng-container  *ngIf="email?.invalid && f.submitted">
             <div class="alert" *ngIf="email.hasError('email')">
               Email invalido
             </div>
@@ -42,7 +42,7 @@
         </div>
 
         <div class="button">
-          <button type="submit"  >Entrar</button>
+          <button type="submit">Entrar</button>
         </div>
       </form>
 
