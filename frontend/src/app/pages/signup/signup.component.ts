@@ -45,7 +45,7 @@ export class SignupComponent implements OnInit{
   }
 
   get confirmPassword () {
-    return this,this.formValidation.get('confirmPassword')!;
+    return this.formValidation.get('confirmPassword')!;
   }
 
 
