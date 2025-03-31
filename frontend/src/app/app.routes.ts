@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { UserComponent } from './pages/user/user.component';
+import {LoggedComponent} from "./pages/logged/logged.component";
 
 export const routes: Routes = [
   {
@@ -29,5 +30,9 @@ export const routes: Routes = [
   {
     path: "user",
     component: UserComponent
+  },
+  {
+    path: "logged",
+    component: LoggedComponent
   }
 ];
