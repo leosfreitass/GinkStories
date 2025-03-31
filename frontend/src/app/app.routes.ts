@@ -5,7 +5,6 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { UserComponent } from './pages/user/user.component';
 import {LoggedComponent} from "./pages/logged/logged.component";
-import {FeedComponent} from "./components/feed/feed.component";
 
 export const routes: Routes = [
   {
