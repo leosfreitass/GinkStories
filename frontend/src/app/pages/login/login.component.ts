@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {HeaderComponent} from "../../components/header/header.component";
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {CommonModule} from "@angular/common";
@@ -13,6 +13,8 @@ import {CommonModule} from "@angular/common";
 export class LoginComponent implements OnInit {
   formValidation!: FormGroup;
 
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
     this.formValidation = new FormGroup({
@@ -20,7 +22,7 @@ export class LoginComponent implements OnInit {
       password: new FormControl ('',[Validators.required, Validators.minLength(7)])
     })
 
-  
+
   }
 
   get email() {
@@ -34,7 +36,8 @@ export class LoginComponent implements OnInit {
     if (this.formValidation.invalid) {
       console.log("invalido")
       return;
-  }
+    }
+    this.router.navigate(['home']);
     console.log ("Enviado")
     console.log (this.formValidation.value)
 
