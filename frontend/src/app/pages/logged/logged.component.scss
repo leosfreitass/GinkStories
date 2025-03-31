@@ -1,0 +1,47 @@
+main{
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  background: #FFE62D;
+  width: 15vw;
+  height: 89vh;
+  border-radius: 0.5em;
+
+  .tittle {
+    align-items: center;
+    margin: 1em 0 0 1em;
+    font-size: 85%;
+  }
+  .field {
+    background: #f4f4f4;
+    margin-top: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 0.5em;
+  }
+  .field-message{
+    margin:0.5em;
+  }
+}
+
+.home{
+  display: flex;
+  margin-right: 45em;
+  margin-top:15em;
+  height: 8%;
+  border-radius: 0.5em;
+  background: #EAEAEA;
+  padding: 1em;
+  color: #757575;
+  .home-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1{
+    padding-bottom: 0.5em;
+  }
+}
