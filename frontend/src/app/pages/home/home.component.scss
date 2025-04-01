@@ -1,13 +1,13 @@
 main{
   display: flex;
-  justify-content: space-between;
+
 }
 .menu {
   display: flex;
   flex-direction: column;
   background: #FFE62D;
-  width: 15vw;
-  height: 89vh;
+  width: 20rem;
+  height: 100vh;
   border-radius: 0.5em;
 
   .tittle {
@@ -29,17 +29,19 @@ main{
 
 .home{
   display: flex;
-  margin-right: 45em;
-  margin-top:15em;
-  height: 8%;
-  border-radius: 0.5em;
-  background: #EAEAEA;
-  padding: 1em;
-  color: #757575;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
   .home-message {
     display: flex;
+    padding: 1rem;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background: #EAEAEA;
+    color: #757575;
+    border-radius: 0.5em;
     p {
       font-size: 1rem;
       font-weight: 700;
@@ -55,8 +57,5 @@ main{
         text-decoration: underline;
       }
     }
-  }
-  h1{
-    padding-bottom: 0.5em;
   }
 }
