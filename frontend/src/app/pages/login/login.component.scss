@@ -84,6 +84,17 @@ main{
 
       .option-link{
         margin-bottom: 0.5em;
+        a {
+          color: #000;
+          font-weight: bold;
+          font-size: 1em;
+          opacity: 0.85;
+          transition: 0.2s;
+
+          &:hover{
+            color: #FFCC00;
+          }
+        }
       }
     }
 
