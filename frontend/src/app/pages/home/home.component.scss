@@ -1,6 +1,5 @@
 main{
   display: flex;
-
 }
 .menu {
   display: flex;
@@ -29,10 +28,11 @@ main{
 
 .home{
   display: flex;
+  flex-direction: column;
   width: 100%;
+  gap: 10rem;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
   .home-message {
     display: flex;
     padding: 1rem;
