@@ -8,6 +8,8 @@ main{
   width: 20rem;
   height: 100vh;
   border-radius: 0.15em;
+  position: sticky;
+  top: 0;
 
   .tittle {
     align-items: center;
@@ -33,6 +35,8 @@ main{
   gap: 10rem;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
   .home-message {
     display: flex;
     padding: 1rem;
