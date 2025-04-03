@@ -16,15 +16,24 @@ main{
     margin: 1em 0 0 1em;
     font-size: 85%;
   }
-  .field {
-    background: #f4f4f4;
-    margin-top: 2em;
+  .menu-content{
+
+    margin-top: 1rem;
     margin-left: 0.5em;
     margin-right: 0.5em;
-    border-radius: 0.5em;
-  }
-  .field-message{
-    margin:0.5em;
+    .story {
+      display: flex;
+      background: #f4f4f4;
+      border-radius: 0.25em;
+      flex-direction: column;
+      margin: 1rem 0.5rem;
+      padding: 0.5rem;
+      &:hover {
+        background: #EAEAEA;
+        cursor: pointer;
+      }
+    }
+
   }
 }
 
