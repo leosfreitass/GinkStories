@@ -1,4 +1,6 @@
+using GinkStories.Api.UseCases.Users.GetAll;
 using GinkStories.Api.UseCases.Users.Register;
+using GinkStories.Api.UseCases.Users.Update;
 using GinkStories.Communication.Requests;
 using GinkStories.Communication.Responses;
 using GinkStories.Exceptions.ExceptionsBase;
@@ -11,20 +13,33 @@ namespace GinkStories.Api.Controllers
     public class UsersController : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> Get( int id, RequestUserJson request)
+        [ProducesResponseType(typeof(ResponseAllUsersJson),StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public async Task<IActionResult> GetAll()
         {
-            var response = new ResponseUserJson()
+           /* var response = new ResponseShortUserJson()
             {
                 Id = id,
                 Email = request.Email,
                 Name = request.Name,
             };
-            return Ok(response);
+            */
+
+           var useCase = new GetAllUsersUseCase();
+           var response = useCase.Execute();
+
+           if (response.Users.Count == 0)
+           {
+               return NoContent();
+           }
+           
+           return Ok(response);
 
         }
+        
 
         [HttpPost]
-        [ProducesResponseType(typeof(ResponseUserJson), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ResponseShortUserJson), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Post([FromBody] RequestUserJson request  )
         {
@@ -36,24 +51,12 @@ namespace GinkStories.Api.Controllers
             };
             */
 
-            try
-            {
-                var useCase = new RegisterUserUseCase();
-                var response = useCase.Execute(request);
+            var useCase = new RegisterUserUseCase();
+            var response = useCase.Execute(request);
 
-                return
-                    Created(string.Empty,
-                        response); //status created precisa passar dois parametros para não ter erro, defini um parametro vazio e outro passando a response
-            }
-            catch ( GinkStoriesException ex)
-            {
-                var errors = ex.GetErrors();
-                return BadRequest(new ResponseErrorMessagesJson(errors));
-            }
-            catch 
-            {
-               return StatusCode(StatusCodes.Status500InternalServerError, new ResponseErrorMessagesJson("ERRO DESCONHECIDO"));
-            }
+            return
+                Created(string.Empty,
+                    response); //status created precisa passar dois parametros para não ter erro, defini um parametro vazio e outro passando a response
         }
 
         [HttpDelete]
@@ -65,17 +68,22 @@ namespace GinkStories.Api.Controllers
         }
 
         [HttpPut]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ResponseErrorMessagesJson),StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status404NotFound)]
         [Route("{id}")]
         public async Task<IActionResult> Put([FromRoute] int id, [FromBody] RequestUserJson request)
-        {
-            var response = new ResponseUserJson()
+        {   /*
+            var response = new ResponseShortUserJson()
             {
                 Id = id,
                 Name = request.Name,
                 Email = request.Email
             }; 
-            //implementar metódo atualizar
-            return Ok(response);
+            //implementar metódo atualizar*/
+            var useCase = new UpdateUserUseCase();
+            useCase.Execute(id, request);
+            return NoContent();
         }
         
     }
