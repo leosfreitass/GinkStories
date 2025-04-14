@@ -1,3 +1,5 @@
+using System.Net;
+
 namespace GinkStories.Exceptions.ExceptionsBase;
 //classe de exceções customizadas
 public abstract class GinkStoriesException : SystemException 
@@ -8,4 +10,5 @@ public abstract class GinkStoriesException : SystemException
     }
 
     public abstract List<string> GetErrors(); //função que as outras classes filhas de GinkStoriesException deverão implementar (obrigatoriamente)
+    public abstract HttpStatusCode GetStatusCode(); //função para entregar StatusCode  
 }

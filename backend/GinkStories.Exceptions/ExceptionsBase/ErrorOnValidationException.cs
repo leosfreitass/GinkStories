@@ -1,3 +1,5 @@
+using System.Net;
+
 namespace GinkStories.Exceptions.ExceptionsBase;
 
 public class ErrorOnValidationException : GinkStoriesException
@@ -12,4 +14,6 @@ public class ErrorOnValidationException : GinkStoriesException
     {
         return _errors;
     }
+
+    public override HttpStatusCode GetStatusCode() => HttpStatusCode.BadRequest;
 }
