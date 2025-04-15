@@ -10,6 +10,6 @@ public class RequestUserValidator : AbstractValidator<RequestUserJson>  //aplica
     {
         RuleFor(user => user.Email).EmailAddress().WithMessage("Email inválido");   //objeto user para a propriedade user.email
         RuleFor(user => user.Name).NotEmpty().WithMessage("Nome não pode ser vazio");
-        RuleFor(user => user.Password).MinimumLength(7).WithMessage("Nome deve ter 7 caracteres");
+        RuleFor(user => user.Password).MinimumLength(7).WithMessage("Senha deve ter 7 caracteres");
     }
 }

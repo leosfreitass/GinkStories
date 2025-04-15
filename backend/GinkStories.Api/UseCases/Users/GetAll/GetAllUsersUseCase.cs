@@ -9,7 +9,7 @@ public class GetAllUsersUseCase
     {
         var dbContext = new GinkStoriesDbContext();
         
-        var users = dbContext.users.ToList();
+        var users = dbContext.users.Where(user => !user.deleted).ToList();
 
         return new ResponseAllUsersJson
         {
