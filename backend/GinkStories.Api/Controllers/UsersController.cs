@@ -1,3 +1,4 @@
+using GinkStories.Api.UseCases.Users.Delete;
 using GinkStories.Api.UseCases.Users.GetAll;
 using GinkStories.Api.UseCases.Users.Register;
 using GinkStories.Api.UseCases.Users.Update;
@@ -61,10 +62,13 @@ namespace GinkStories.Api.Controllers
 
         [HttpDelete]
         [Route("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
-            //implementar metódo deletar
-            return Ok($"DELETADO {id}");  
+            var useCase = new DeleteUserUseCase();
+            useCase.Execute(id);
+            return NoContent();
         }
 
         [HttpPut]
