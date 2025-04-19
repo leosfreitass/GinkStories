@@ -1,6 +1,14 @@
 section {
+  //background-color: blue;
   margin: 5rem;
+  //height: 500px;
   display: flex;
   flex-direction: row;
-  max-width: 100%;
+  flex-wrap: wrap;
+  //max-width: 100%;
+  
+}
+
+app-work {
+  margin-bottom: 4rem;
 }
