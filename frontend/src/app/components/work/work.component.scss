@@ -7,12 +7,14 @@
 }
 
 article{
+  margin-inline: 2.5rem; //muda a margem entre os app-work
   background-color: #F4F4F4;
   padding: 1rem;
   display: flex;
   flex-direction: row;
   border: 0.2px solid #8e8e8e;
   border-radius: 0.25em;
+  width: 20rem;
 }
 
 .info-historia-card {
@@ -33,10 +35,16 @@ article{
   }
 }
 
+.datas-card {
+  font-size: 0.9rem;
+}
+
 .descricao-historia-card {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   background-color: #fff;
-  padding: 1rem;
+  padding: 0.6rem;
   border: 0.2px solid #8e8e8e;
   border-radius: 0.25em;
+  height: 10rem;
+  overflow: hidden; //colocar ´...´ ao final do texto
 }
