@@ -1,12 +1,15 @@
-﻿namespace GinkStories.Api;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GinkStories.Api.Entities;
 
 public class User
 {
-    public int Id { get; set; }
-    public string Name { get; set; } = string.Empty;
-    public string Email { get; set; } = string.Empty;
-    public string Password { get; set; } = string.Empty;
+    [Key]
+    public int id { get; set; }
+    public string name { get; set; } = string.Empty;
+    public string email { get; set; } = string.Empty;
+    public string password { get; set; } = string.Empty;
     //public DateTime CreatedAt { get; set; }
     //public DateTime UpdatedAt { get; set; }
-    public bool Deleted { get; set; }
+    public bool deleted { get; set; }
 }

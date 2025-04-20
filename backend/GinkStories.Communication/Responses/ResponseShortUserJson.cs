@@ -1,6 +1,6 @@
 namespace GinkStories.Communication.Responses;
 
-public class ResponseUserJson
+public class ResponseShortUserJson
 {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;

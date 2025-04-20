@@ -57,8 +57,4 @@ export class SignupComponent implements OnInit{
     console.log("enviado")
     console.log(this.formValidation.value)
   }
-
-  debug (){
-    console.log(this.formValidation.controls)
-  }
 }
