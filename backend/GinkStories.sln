@@ -1,16 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Api", "GinkStories.Api\GinkStories.Api.csproj", "{33CD69B7-9C50-4791-AB1F-3FB48810A8DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Api", "src\GinkStories.Api\GinkStories.Api.csproj", "{33CD69B7-9C50-4791-AB1F-3FB48810A8DB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1B752B6E-166B-4B49-B9EC-4F3A404D7256}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A08BF095-557B-4049-BD51-430D3EA1D8C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Api.test", "GinkStories.Api.test\GinkStories.Api.test.csproj", "{34932E03-8165-4342-9B88-88E5C11623B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Api.test", "test\GinkStories.Api.test\GinkStories.Api.test.csproj", "{34932E03-8165-4342-9B88-88E5C11623B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Communication", "GinkStories.Communication\GinkStories.Communication.csproj", "{24771635-5342-445B-8255-6B872C14CD81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Communication", "src\GinkStories.Communication\GinkStories.Communication.csproj", "{24771635-5342-445B-8255-6B872C14CD81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Exceptions", "GinkStories.Exceptions\GinkStories.Exceptions.csproj", "{A4370F5B-2AD1-4315-805F-DF16A2C23B30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Exceptions", "src\GinkStories.Exceptions\GinkStories.Exceptions.csproj", "{A4370F5B-2AD1-4315-805F-DF16A2C23B30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
