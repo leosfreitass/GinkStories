@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: ginkstoriesdb
+    restart: always
+    environment:
+      POSTGRES_DB: ginkstoriesdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: user
+      POSTGRES_ROOT_PASSWORD: root123
+    
+    volumes:
+      - ./database/postgres-data/ginkstoriesdb/:/var/lib/postgresql/data/
+  
+    ports:
+      - "5432:5432"
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ginkstoriesfront
+    restart: always
+    volumes:
+      - ./frontend:/app/frontend
+      - ./frontend/node_modules:/app/frontend/node_modules
+    ports:
+      - 4200:4200
+  
