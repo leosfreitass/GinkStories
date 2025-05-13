@@ -23,4 +23,4 @@ COPY --from=build /app/publish .
 EXPOSE 8080
 
 # Set the entry point
-ENTRYPOINT ["dotnet", "GinkStories.Api.dll", "--launch-profile", "Docker"]
+ENTRYPOINT ["dotnet", "GinkStories.Api.dll"]
