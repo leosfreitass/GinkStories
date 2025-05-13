@@ -1,0 +1,91 @@
+<app-header></app-header>
+
+<main>
+  <form action="" (ngSubmit)="submit()" [formGroup]="formValidation" #f="ngForm">
+    <div class="form-user">
+      <img alt="foto de perfil" [src]="imagePreview || 'assets/image_test_feed_1.jpg'" >
+      <div class="input-user">
+        <input type="file" name="image" id="image" (change)="onImageChange($event);">
+        Upload
+      </div>
+
+    </div>
+
+    <div class="form-content">
+      <div class="content-profile">
+        <label for="name">Nome</label>
+        <div class="input-with-icon">
+          <span class="material-symbols-outlined">
+          person
+          </span>
+          <input type="text" name="name" id="name" formControlName="name" placeholder="Maria">
+        </div>
+
+        <ng-container *ngIf="name.invalid && f.submitted">
+          <div class="alert" *ngIf="name.hasError('required')">
+            Nome é obrigatório
+          </div>
+          <div class="alert" *ngIf="name.hasError('minlength')">
+            Nome pequeno
+          </div>
+        </ng-container>
+      </div>
+
+      <div class="content-profile">
+        <label for="email">Email</label>
+        <div class="input-with-icon">
+          <span class="material-symbols-outlined">
+            mail
+          </span>
+          <input type="email" name="email" id="email" formControlName="email" placeholder="example@email.com">
+        </div>
+
+
+        <ng-container *ngIf="email?.invalid && f.submitted">
+          <div class="alert" *ngIf="email.hasError('required')">
+            Email obrigatório
+          </div>
+          <div class="alert" *ngIf="email?.hasError('email')">
+            Email invalido
+          </div>
+        </ng-container>
+      </div>
+
+      <div class="content-profile">
+        <label for="password">Senha</label>
+        <div class="input-with-icon">
+          <span class="material-symbols-outlined">
+            lock
+          </span>
+          <input type="password" name="password" id="password" placeholder="*******" formControlName="password">
+
+        </div>
+
+        <ng-container *ngIf="password?.invalid && f.submitted">
+          <div class="alert" *ngIf="password?.hasError('required')">
+            Senha é obrigatória
+          </div>
+          <div class="alert" *ngIf="password?.hasError('minlength')">
+            Senha deve ter 7 caracteres
+          </div>
+          <div class="alert" *ngIf="password?.hasError('hasUpperCase')">
+            Senha deve ter 1 letra maiúscula
+          </div>
+          <div class="alert" *ngIf="password?.hasError('hasLowerUpperCase')">
+            Senha deve ter 1 letra minúscula
+          </div>
+          <div class="alert" *ngIf="password?.hasError('hasNumericChar')">
+            Senha deve ter 1 número
+          </div>
+        </ng-container>
+      </div>
+
+    </div>
+
+    <div class="form-button">
+      <button type="submit">Salvar</button>
+    </div>
+
+  </form>
+
+</main>
