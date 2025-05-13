@@ -13,10 +13,10 @@
 
   <nav class="header-nav">
     <ul class="header-ul">
-      <li *ngIf="router.url !== '/login'">
+      <li *ngIf="shouldShow('login')">
         <a routerLink="/login" routerLinkActive="active">Login</a>
       </li>
-      <li *ngIf="router.url !== '/signup'">
+      <li *ngIf="shouldShow('signup')">
         <a routerLink="/signup" routerLinkActive="active">Sign up</a>
       </li>
     </ul>
