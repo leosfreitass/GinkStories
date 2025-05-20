@@ -1,16 +1,16 @@
 .story-content {
-    //background-color: goldenrod;
-    margin: 3rem;
-     
+    margin-top: 4rem;
+    margin-inline: 30rem;
+
 }
 
 .cabecalho-historia {
     display: flex;
+    padding: 1em;
     flex-direction: row;
-    gap: 1rem;
-    //justify-content: center;
-    padding: 0.25rem;
-    
+    gap: 1rem; 
+    background-color: #f4f4f4;
+    border-radius: 0.5em;
 
     .capa-historia {
         border: 1px solid #333;
@@ -22,7 +22,6 @@
 
     .info-historia {
         justify-content: center;
-        //background-color: #0051ff;
         display: flex;
         flex-direction: column;
         gap: 0.5em;
@@ -35,10 +34,15 @@
         }
 
         .ler-button {
-            text-decoration: none;
             font-weight: bold;
+            text-decoration: none;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
             background-color: #FFE62D;
-            //border: 1px solid #e2cc00;
             border-radius: 1em;
             padding: 0.5rem;
             color: #222222;
@@ -53,10 +57,49 @@
     }    
 }
 
-.sinopse-container {
-    margin-top: 1rem;
+.detalhes-historia {
+    margin-top: 2em;
+    margin-inline: 5rem;
+
+    .sinopse-titulo {
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
 
     .sinopse {
-        margin-top: 0.5rem;
+        margin-top: 0.5em;
+        font-size: 1.2rem;
     }
+
+    .indice {
+        margin-top: 1em;
+        font-size: 1.5em;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+
+                
+    }
+
+    li {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            
+
+            a {
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-decoration: none;
+                color: #000;
+                
+
+            }
+
+            span {
+                font-weight: normal;
+                font-size: 1.2rem;
+            }
+        }
 }

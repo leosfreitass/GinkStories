@@ -1,0 +1,41 @@
+body {
+    margin-top: 5rem;
+    margin-inline: 30rem;
+}
+
+.cabecalho-historia-leitura {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .capa-historia-leitura{
+        border: 1px solid #333;
+        background-color: #fff;
+        padding: 0.25rem;
+        max-width: 8rem;
+        max-height: 12rem;
+    }
+
+    .info-historia-leitura {
+        //justify-content: center;
+        gap: 0.5em;
+
+        .titulo-leitura {
+            font-size: 2.5em;
+        }
+        .autor-leitura {
+            font-size: 1.5em;
+        }
+    }
+
+
+}
+
+.historia-leitura {
+    margin-top: 1em;
+
+    .titulo-capitulo {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+}
