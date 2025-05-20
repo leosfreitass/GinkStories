@@ -21,4 +21,8 @@
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\GinkStories.Api\GinkStories.Api.csproj" />
+    </ItemGroup>
+
 </Project>
