@@ -1,5 +1,5 @@
 using GinkStories.Api.Infrastructure;
-using GinkStories.Exceptions.ExceptionsBase;
+using GinkStories.Exception.ExceptionsBase;
 
 namespace GinkStories.Api.UseCases.Users.Delete;
 

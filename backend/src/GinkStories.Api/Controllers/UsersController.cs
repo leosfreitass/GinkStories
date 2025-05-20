@@ -4,7 +4,7 @@ using GinkStories.Api.UseCases.Users.Register;
 using GinkStories.Api.UseCases.Users.Update;
 using GinkStories.Communication.Requests;
 using GinkStories.Communication.Responses;
-using GinkStories.Exceptions.ExceptionsBase;
+using GinkStories.Exception.ExceptionsBase;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GinkStories.Api.Controllers

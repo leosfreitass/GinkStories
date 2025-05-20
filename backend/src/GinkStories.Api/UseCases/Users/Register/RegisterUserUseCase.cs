@@ -2,7 +2,7 @@ using GinkStories.Api.Entities;
 using GinkStories.Api.Infrastructure;
 using GinkStories.Communication.Requests;
 using GinkStories.Communication.Responses;
-using GinkStories.Exceptions.ExceptionsBase;
+using GinkStories.Exception.ExceptionsBase;
 
 namespace GinkStories.Api.UseCases.Users.Register;
 

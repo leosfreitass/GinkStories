@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Api.test", "tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Communication", "src\GinkStories.Communication\GinkStories.Communication.csproj", "{24771635-5342-445B-8255-6B872C14CD81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Exceptions", "src\GinkStories.Exceptions\GinkStories.Exceptions.csproj", "{A4370F5B-2AD1-4315-805F-DF16A2C23B30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Exception", "src\GinkStories.Exception\GinkStories.Exception.csproj", "{A4370F5B-2AD1-4315-805F-DF16A2C23B30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Application", "GinkStories.Application\GinkStories.Application.csproj", "{9B9784C6-B4EB-44C5-A0AB-6D584AEF8B0C}"
 EndProject

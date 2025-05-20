@@ -1,7 +1,7 @@
 using GinkStories.Api.Infrastructure;
 using GinkStories.Api.UseCases.Users.Register;
 using GinkStories.Communication.Requests;
-using GinkStories.Exceptions.ExceptionsBase;
+using GinkStories.Exception.ExceptionsBase;
 
 namespace GinkStories.Api.UseCases.Users.Update;
 

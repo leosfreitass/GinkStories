@@ -21,7 +21,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\GinkStories.Communication\GinkStories.Communication.csproj" />
-      <ProjectReference Include="..\GinkStories.Exceptions\GinkStories.Exceptions.csproj" />
+      <ProjectReference Include="..\GinkStories.Exception\GinkStories.Exception.csproj" />
     </ItemGroup>
 
 </Project>

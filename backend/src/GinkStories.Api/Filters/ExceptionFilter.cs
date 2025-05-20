@@ -1,5 +1,5 @@
 using GinkStories.Communication.Responses;
-using GinkStories.Exceptions.ExceptionsBase;
+using GinkStories.Exception.ExceptionsBase;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
