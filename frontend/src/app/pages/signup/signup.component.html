@@ -23,24 +23,6 @@
           </ng-container>
         </div>
 
-        <div class="form-field">
-          <label for="lastname">Sobrenome</label>
-          <div class="input-with-icon">
-            <span class="material-symbols-outlined">
-              person
-            </span>
-            <input type="text" name="lastname" id="lastname" placeholder="Ex: Joaquina de Aragão" formControlName="lastName">
-          </div>
-
-          <ng-container *ngIf="lastName.invalid && f.submitted">
-            <div class="alert" *ngIf="lastName.hasError('required')">
-              Sobrenome é obrigatório
-            </div>
-            <div class="alert" *ngIf="lastName.hasError('minlength')">
-              Sobrenome Pequeno
-            </div>
-          </ng-container>
-        </div>
 
         <div class="form-field">
           <label for="email">Email</label>
