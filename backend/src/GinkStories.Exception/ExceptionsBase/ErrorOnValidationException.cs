@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace GinkStories.Exceptions.ExceptionsBase;
+namespace GinkStories.Exception.ExceptionsBase;
 
 public class ErrorOnValidationException : GinkStoriesException
 {

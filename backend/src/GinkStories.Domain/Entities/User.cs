@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace GinkStories.Api.Entities;
+namespace GinkStories.Domain.Entities;
 
 public class User
 {

@@ -1,7 +1,7 @@
-using GinkStories.Api.Infrastructure;
 using GinkStories.Communication.Responses;
+using GinkStories.Infrastructure.DataAccess;
 
-namespace GinkStories.Api.UseCases.Users.GetAll;
+namespace GinkStories.Application.UseCases.Users.GetAll;
 
 public class GetAllUsersUseCase
 {
