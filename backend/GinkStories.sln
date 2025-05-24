@@ -12,11 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Communication",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Exception", "src\GinkStories.Exception\GinkStories.Exception.csproj", "{A4370F5B-2AD1-4315-805F-DF16A2C23B30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Application", "GinkStories.Application\GinkStories.Application.csproj", "{9B9784C6-B4EB-44C5-A0AB-6D584AEF8B0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Application", "src\GinkStories.Application\GinkStories.Application.csproj", "{9B9784C6-B4EB-44C5-A0AB-6D584AEF8B0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Infrastructure", "GinkStories.Infrastructure\GinkStories.Infrastructure.csproj", "{4A27FEB3-DDD0-4CA2-BB9A-32D53D9FBA01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Infrastructure", "src\GinkStories.Infrastructure\GinkStories.Infrastructure.csproj", "{4A27FEB3-DDD0-4CA2-BB9A-32D53D9FBA01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Domain", "GinkStories.Domain\GinkStories.Domain.csproj", "{3BE7E0A4-D294-4345-8E62-8B2813C8D858}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Domain", "src\GinkStories.Domain\GinkStories.Domain.csproj", "{3BE7E0A4-D294-4345-8E62-8B2813C8D858}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

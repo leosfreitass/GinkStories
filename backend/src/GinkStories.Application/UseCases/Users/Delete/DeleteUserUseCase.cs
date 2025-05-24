@@ -1,7 +1,7 @@
-using GinkStories.Api.Infrastructure;
 using GinkStories.Exception.ExceptionsBase;
+using GinkStories.Infrastructure.DataAccess;
 
-namespace GinkStories.Api.UseCases.Users.Delete;
+namespace GinkStories.Application.UseCases.Users.Delete;
 
 public class DeleteUserUseCase
 {

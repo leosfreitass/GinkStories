@@ -33,6 +33,6 @@ public class ExceptionFilter : IExceptionFilter
     private void ThrowUnkowError(ExceptionContext context)
     {
         context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
-        context.Result = new ObjectResult(new ResponseErrorMessagesJson("ERRO DESCONHECIDO"));
+        context.Result = new ObjectResult(new ResponseErrorMessagesJson(context.Exception.Message));
     }
 }

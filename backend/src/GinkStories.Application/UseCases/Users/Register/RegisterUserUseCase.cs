@@ -1,10 +1,11 @@
-using GinkStories.Api.Entities;
-using GinkStories.Api.Infrastructure;
+using GinkStories.Application.UseCases.Users.SharedValidator;
 using GinkStories.Communication.Requests;
 using GinkStories.Communication.Responses;
+using GinkStories.Domain.Entities;
 using GinkStories.Exception.ExceptionsBase;
+using GinkStories.Infrastructure.DataAccess;
 
-namespace GinkStories.Api.UseCases.Users.Register;
+namespace GinkStories.Application.UseCases.Users.Register;
 
 public class RegisterUserUseCase
 {

@@ -1,10 +1,10 @@
-using GinkStories.Api.UseCases.Users.Delete;
-using GinkStories.Api.UseCases.Users.GetAll;
-using GinkStories.Api.UseCases.Users.Register;
-using GinkStories.Api.UseCases.Users.Update;
+
+using GinkStories.Application.UseCases.Users.Delete;
+using GinkStories.Application.UseCases.Users.GetAll;
+using GinkStories.Application.UseCases.Users.Register;
+using GinkStories.Application.UseCases.Users.Update;
 using GinkStories.Communication.Requests;
 using GinkStories.Communication.Responses;
-using GinkStories.Exception.ExceptionsBase;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GinkStories.Api.Controllers

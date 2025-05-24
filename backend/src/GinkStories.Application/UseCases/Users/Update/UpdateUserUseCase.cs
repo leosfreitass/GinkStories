@@ -1,9 +1,9 @@
-using GinkStories.Api.Infrastructure;
-using GinkStories.Api.UseCases.Users.Register;
+using GinkStories.Application.UseCases.Users.SharedValidator;
 using GinkStories.Communication.Requests;
 using GinkStories.Exception.ExceptionsBase;
+using GinkStories.Infrastructure.DataAccess;
 
-namespace GinkStories.Api.UseCases.Users.Update;
+namespace GinkStories.Application.UseCases.Users.Update;
 
 public class UpdateUserUseCase
 {
