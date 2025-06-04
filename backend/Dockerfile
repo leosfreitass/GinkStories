@@ -27,15 +27,23 @@
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /app
-EXPOSE 8080
 
-#COPY . /app
-COPY *.sln /app
-COPY src/ /app/src/
-COPY test/ /app/test/
-COPY Directory.Build.props /app/
+# Copy solution and props first
+COPY *.sln .
+COPY Directory.Build.props .
+
+
+COPY src/ ./src/
+COPY test/ ./test/
+
+# Restore dependencies
 RUN dotnet restore
 
-#COPY . ./
+COPY src/ ./src/
+COPY test/ ./test/
 
+# Build to artifacts (not to project folders)
+RUN dotnet build -c Debug -o /artifacts
+
+# Set working directory to API project
 ENTRYPOINT [ "dotnet", "watch", "run", "--project", "src/GinkStories.Api/GinkStories.Api.csproj", "--urls", "http://*:8080"]

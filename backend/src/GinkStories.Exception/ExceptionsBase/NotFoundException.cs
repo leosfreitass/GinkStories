@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Net;
 
 namespace GinkStories.Exception.ExceptionsBase;

@@ -1,5 +1,6 @@
-src/**/bin
-src/**/obj
-test/**/bin
-test/**/obj
+**/bin
+**/obj
 artifacts/
+Dockerfile
+.dockerignore
+.git

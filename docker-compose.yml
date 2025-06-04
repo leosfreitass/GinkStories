@@ -28,10 +28,8 @@ services:
     depends_on:
       - db
     volumes:
-      - ./backend/src:/app/src
-      - ./backend/test:/app/test
-      - ./backend/GinkStories.sln:/app/GinkStories.sln
-      - ./backend/Directory.Build.props:/app/Directory.Build.props 
+       - ./backend/src:/app/src
+       - ./backend/test:/app/test
     networks:
       - gink-network
 
