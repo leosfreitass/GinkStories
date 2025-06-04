@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace GinkStories.Exceptions.ExceptionsBase;
+namespace GinkStories.Exception.ExceptionsBase;
 //classe de exceções customizadas
 public abstract class GinkStoriesException : SystemException 
 {

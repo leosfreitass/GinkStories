@@ -10,7 +10,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Api.test", "tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Communication", "src\GinkStories.Communication\GinkStories.Communication.csproj", "{24771635-5342-445B-8255-6B872C14CD81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Exceptions", "src\GinkStories.Exceptions\GinkStories.Exceptions.csproj", "{A4370F5B-2AD1-4315-805F-DF16A2C23B30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Exception", "src\GinkStories.Exception\GinkStories.Exception.csproj", "{A4370F5B-2AD1-4315-805F-DF16A2C23B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Application", "src\GinkStories.Application\GinkStories.Application.csproj", "{9B9784C6-B4EB-44C5-A0AB-6D584AEF8B0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Infrastructure", "src\GinkStories.Infrastructure\GinkStories.Infrastructure.csproj", "{4A27FEB3-DDD0-4CA2-BB9A-32D53D9FBA01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GinkStories.Domain", "src\GinkStories.Domain\GinkStories.Domain.csproj", "{3BE7E0A4-D294-4345-8E62-8B2813C8D858}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,11 +40,26 @@ Global
 		{A4370F5B-2AD1-4315-805F-DF16A2C23B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4370F5B-2AD1-4315-805F-DF16A2C23B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4370F5B-2AD1-4315-805F-DF16A2C23B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B9784C6-B4EB-44C5-A0AB-6D584AEF8B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9784C6-B4EB-44C5-A0AB-6D584AEF8B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B9784C6-B4EB-44C5-A0AB-6D584AEF8B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B9784C6-B4EB-44C5-A0AB-6D584AEF8B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A27FEB3-DDD0-4CA2-BB9A-32D53D9FBA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A27FEB3-DDD0-4CA2-BB9A-32D53D9FBA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A27FEB3-DDD0-4CA2-BB9A-32D53D9FBA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A27FEB3-DDD0-4CA2-BB9A-32D53D9FBA01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE7E0A4-D294-4345-8E62-8B2813C8D858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE7E0A4-D294-4345-8E62-8B2813C8D858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE7E0A4-D294-4345-8E62-8B2813C8D858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE7E0A4-D294-4345-8E62-8B2813C8D858}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{33CD69B7-9C50-4791-AB1F-3FB48810A8DB} = {1B752B6E-166B-4B49-B9EC-4F3A404D7256}
 		{34932E03-8165-4342-9B88-88E5C11623B3} = {A08BF095-557B-4049-BD51-430D3EA1D8C4}
 		{24771635-5342-445B-8255-6B872C14CD81} = {1B752B6E-166B-4B49-B9EC-4F3A404D7256}
 		{A4370F5B-2AD1-4315-805F-DF16A2C23B30} = {1B752B6E-166B-4B49-B9EC-4F3A404D7256}
+		{9B9784C6-B4EB-44C5-A0AB-6D584AEF8B0C} = {1B752B6E-166B-4B49-B9EC-4F3A404D7256}
+		{4A27FEB3-DDD0-4CA2-BB9A-32D53D9FBA01} = {1B752B6E-166B-4B49-B9EC-4F3A404D7256}
+		{3BE7E0A4-D294-4345-8E62-8B2813C8D858} = {1B752B6E-166B-4B49-B9EC-4F3A404D7256}
 	EndGlobalSection
 EndGlobal

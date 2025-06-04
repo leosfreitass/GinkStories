@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <!-- Redirect bin outputs to solution-level artifacts folder -->
+    <BaseOutputPath>$(MSBuildThisFileDirectory)artifacts\bin\$(MSBuildProjectName)\</BaseOutputPath>
+    
+    <!-- Redirect obj outputs to solution-level artifacts folder -->
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)artifacts\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    
+    <!-- Ensure all projects respect these paths -->
+    <OutputPath>$(BaseOutputPath)</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+  </PropertyGroup>
+</Project>

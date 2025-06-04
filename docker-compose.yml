@@ -8,12 +8,33 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: user
       POSTGRES_ROOT_PASSWORD: root123
-    
     volumes:
       - ./database/postgres-data/ginkstoriesdb/:/var/lib/postgresql/data/
-  
     ports:
       - "5432:5432"
+    networks:
+      - gink-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ginkstoriesbackend
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    depends_on:
+      - db
+    volumes:
+      - ./backend/src:/app/src
+      - ./backend/test:/app/test
+      - ./backend/GinkStories.sln:/app/GinkStories.sln
+      - ./backend/Directory.Build.props:/app/Directory.Build.props 
+    networks:
+      - gink-network
+
   frontend:
     build:
       context: ./frontend
@@ -24,5 +45,11 @@ services:
       - ./frontend:/app/frontend
       - ./frontend/node_modules:/app/frontend/node_modules
     ports:
-      - 4200:4200
+      - "4200:4200"
+    networks:
+      - gink-network
+
+networks:
+  gink-network:
+    driver: bridge
   

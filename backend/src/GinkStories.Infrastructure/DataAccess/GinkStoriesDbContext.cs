@@ -1,7 +1,7 @@
-using GinkStories.Api.Entities;
+using GinkStories.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace GinkStories.Api.Infrastructure;
+namespace GinkStories.Infrastructure.DataAccess;
 
 public class GinkStoriesDbContext : DbContext
 {
@@ -9,6 +9,6 @@ public class GinkStoriesDbContext : DbContext
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Host=localhost;Database=ginkstoriesdb;Username=admin;Password=user");
+        optionsBuilder.UseNpgsql("Host=db;Database=ginkstoriesdb;Username=admin;Password=user");
     }
 }

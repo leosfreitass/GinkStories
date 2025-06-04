@@ -1,7 +1,7 @@
 using FluentValidation;
 using GinkStories.Communication.Requests;
 
-namespace GinkStories.Api.UseCases.Users.Register;
+namespace GinkStories.Application.UseCases.Users.SharedValidator;
 //classe para validar as informações do cadastro 
 //Put e Post
 public class RequestUserValidator : AbstractValidator<RequestUserJson>  //aplicando o validator para a classe RequestUserJson
