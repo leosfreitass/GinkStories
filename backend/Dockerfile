@@ -29,9 +29,13 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /app
 EXPOSE 8080
 
-COPY . /app
+#COPY . /app
+COPY *.sln /app
+COPY src/ /app/src/
+COPY test/ /app/test/
+COPY Directory.Build.props /app/
 RUN dotnet restore
 
-COPY . ./
+#COPY . ./
 
 ENTRYPOINT [ "dotnet", "watch", "run", "--project", "src/GinkStories.Api/GinkStories.Api.csproj", "--urls", "http://*:8080"]

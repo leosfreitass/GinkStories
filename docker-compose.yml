@@ -25,11 +25,13 @@ services:
       - "8080:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__DefaultConnection: "Host=db;Database=ginkstoriesdb;Username=admin;Password=user;"
     depends_on:
       - db
     volumes:
-      - ./backend:/app/
+      - ./backend/src:/app/src
+      - ./backend/test:/app/test
+      - ./backend/GinkStories.sln:/app/GinkStories.sln
+      - ./backend/Directory.Build.props:/app/Directory.Build.props 
     networks:
       - gink-network
 
