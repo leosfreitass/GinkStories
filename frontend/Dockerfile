@@ -1,14 +1,18 @@
-FROM node:alpine
-WORKDIR /app/frontend
+FROM node:lts-alpine
 
-ENV PATH /app/frontend/node_modules/.bin:$PATH
+WORKDIR /app
 
-COPY package.json /app/frontend/package.json
-RUN npm install
-RUN npm install -g @angular/cli@latest
+COPY package*.json .
 
-COPY . /app/frontend
+RUN npm ci
 
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+COPY . .
+
+COPY entrypoint.sh /docker-entrypoint/entrypoint.sh
+RUN chmod +x /docker-entrypoint/entrypoint.sh
+
+EXPOSE 4200
+
+ENTRYPOINT [ "/docker-entrypoint/entrypoint.sh" ]
 
 
