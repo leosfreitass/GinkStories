@@ -25,6 +25,7 @@
 # Set the entry point
 #ENTRYPOINT ["dotnet", "GinkStories.Api.dll"]
 
+#Dockerfile Dev
 FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /app
 
@@ -46,4 +47,4 @@ COPY test/ ./test/
 RUN dotnet build -c Debug -o /artifacts
 
 # Set working directory to API project
-ENTRYPOINT [ "dotnet", "watch", "run", "--project", "src/GinkStories.Api/GinkStories.Api.csproj", "--urls", "http://*:8080"]
+ENTRYPOINT [ "dotnet", "watch", "run", "--project", "src/GinkStories.Api/GinkStories.Api.csproj", "--no-hot-reload", "--urls", "http://*:8080"]
